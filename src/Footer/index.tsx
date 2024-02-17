@@ -1,5 +1,6 @@
 import React from "react";
 import Mountains from "./Mountains";
+import "./style.scss";
 
 const Footer = () => {
   return (

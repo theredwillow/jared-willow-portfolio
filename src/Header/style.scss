@@ -1,0 +1,42 @@
+#scroll {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#name {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  width: 75vw;
+  z-index: 500;
+  transition: width 0.75s;
+
+  @media only screen and (min-width: 600px) {
+    &:not(.fixed) {
+      transform: translate(0, 30vh);
+    }
+  }
+
+  &.fixed {
+    width: 50vw;
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+  }
+}
+
+#sun {
+  width: 40vh;
+  height: 40vh;
+  margin-bottom: 200px;
+}
+
+#click-cars {
+  position: fixed;
+  left: 49.5%;
+  bottom: 25%;
+  width: 50%;
+  z-index: 500;
+}

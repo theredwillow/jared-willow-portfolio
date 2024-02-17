@@ -1,0 +1,72 @@
+.mountains {
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+
+  position: fixed;
+  bottom: 18vh;
+  width: calc(35.5vw - 87.5px);
+  height: 7.5vh;
+  z-index: 50;
+
+  &:nth-of-type(1) {
+    left: 16vw;
+  }
+
+  &:nth-of-type(2) {
+    right: 15vw;
+  }
+}
+
+#ground {
+  background-image: linear-gradient(to top, white 35%, transparent 35%),
+    linear-gradient(#ff9de6, #ff85ea),
+    linear-gradient(to right, grey 1px, transparent 1px),
+    linear-gradient(to bottom, grey 1px, transparent 1px),
+    linear-gradient(#7122fa, #560a86);
+  background-size: 5px 15%, 175px auto, 80px 5px, 80px 20px, auto;
+  animation: cruising 0.5s infinite linear;
+  background-repeat: repeat-y, no-repeat, repeat, repeat, no-repeat;
+  transform: perspective(125px) rotateX(45deg);
+  perspective-origin: bottom;
+  width: 100vw;
+  height: 25vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+@keyframes cruising {
+  from {
+    background-position: center 0, center, 0 0, 0 0, 0 0;
+  }
+  to {
+    background-position: center 15%, center, 0 0, 0 15%, 0 0;
+  }
+}
+
+#cars {
+  position: fixed;
+  z-index: 500;
+  bottom: 0;
+  left: 52%;
+  height: 18vh;
+  width: 75px;
+
+  a > img {
+    height: 7.5vh;
+  }
+
+  a:nth-of-type(1) > img {
+    transform: scale(0.5) translate(-50%, -25%);
+  }
+
+  a:nth-of-type(2) > img {
+    transform: scale(0.75) translate(-25%, -75%);
+  }
+
+  a:nth-of-type(3) > img {
+    transform: translate(-10%, -75%);
+  }
+}
