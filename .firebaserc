@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "jared-weide-portfolio"
-  }
+  },
+  "targets": {
+    "jared-weide-portfolio": {
+      "hosting": {
+        "portfolio": [
+          "jared-willow-portfolio"
+        ],
+        "legacy": [
+          "jared-weide-portfolio"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

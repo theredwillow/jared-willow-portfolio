@@ -11,7 +11,7 @@
    - [x] Redraw `name.svg` (Inkscape workflow in [AGENTS.md](AGENTS.md))
    - [x] LinkedIn URL slug (in [AboutMe/index.tsx](src/AboutMe/index.tsx))
    - NOTE: Leave wedding link in [Projects/data.tsx](src/Projects/data.tsx) as is, the project is being removed later
-   - [ ] Firebase project ID in [.firebaserc](.firebaserc); can't be renamed, so new project + redeploy or keep the ID
+   - [x] Firebase URL: new hosting site `jared-willow-portfolio` in the existing project (project ID stays, it is invisible); old site 301s to it. Takes effect on next deploy
    - [ ] `name` in [package.json](package.json) and [package-lock.json](package-lock.json)
    - [ ] GitHub repo rename, then update the git remote (old URL redirects)
    - [ ] Local folder name

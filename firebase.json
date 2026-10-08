@@ -2,18 +2,32 @@
   "database": {
     "rules": "database.rules.json"
   },
-  "hosting": {
-    "public": "build",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-  }
+  "hosting": [
+    {
+      "target": "portfolio",
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "legacy",
+      "public": "legacy-redirect",
+      "redirects": [
+        {
+          "source": "**",
+          "destination": "https://jared-willow-portfolio.web.app",
+          "type": 301
+        }
+      ]
+    }
+  ]
 }
