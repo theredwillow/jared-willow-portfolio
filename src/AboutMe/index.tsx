@@ -9,7 +9,7 @@ const AboutMe = () => (
       <div className="line"></div>
     </div>
     <div className="bio card">
-      Jared Weide
+      Jared Willow
       <br />
       <span className="profession"></span>
       <div id="social-media">

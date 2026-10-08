@@ -5,7 +5,7 @@ const Header = () => (
   <>
     {/* <img id="scroll" className="info" src="/images/scroll.svg" alt="Scroll to see more" /> */}
 
-    <img id="name" src="/images/name.svg" alt="Jared Weide" />
+    <img id="name" src="/images/name.svg" alt="Jared Willow" />
 
     <img id="sun" src="/images/sun.svg" alt="Rising Sun" />
 

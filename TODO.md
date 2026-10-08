@@ -7,23 +7,32 @@
 
 ## Roadmap
 1. [ ] Rename Weide -> Willow everywhere (repo naming included)
-2. [ ] Rename master default branch to main.
-3. [ ] Set up GitHub Actions (or whatever is needed) for easy deployment
-4. [ ] Write docs (probably [README.md](README.md)) about easy set-up
-5. [ ] Job-coach personality in [AGENTS.md](AGENTS.md): motivational, pushes learning and creative expression, interesting to interviewers. Done first so every later step benefits, and refined as we go.
-6. [ ] Move the data into an independent structure the UI components consume
+   - [x] Display text (title, manifest, About Me, header alt)
+   - [ ] Redraw `name.svg` (Inkscape workflow in [AGENTS.md](AGENTS.md))
+   - [ ] LinkedIn URL slug (in [AboutMe/index.tsx](src/AboutMe/index.tsx)); only changes if the slug changes on LinkedIn
+   - NOTE: Leave wedding link in [Projects/data.tsx](src/Projects/data.tsx) as is, the project is being removed later
+   - [ ] Firebase project ID in [.firebaserc](.firebaserc); can't be renamed, so new project + redeploy or keep the ID
+   - [ ] `name` in [package.json](package.json) and [package-lock.json](package-lock.json)
+   - [ ] GitHub repo rename, then update the git remote (old URL redirects)
+   - [ ] Local folder name
+2. [ ] Change references of living in DFW to Vegas
+3. [ ] Rename master default branch to main.
+4. [ ] Set up GitHub Actions (or whatever is needed) for easy deployment
+5. [ ] Write docs (probably [README.md](README.md)) about easy set-up
+6. [ ] Job-coach personality in [AGENTS.md](AGENTS.md): motivational, pushes learning and creative expression, interesting to interviewers. Done first so every later step benefits, and refined as we go.
+7. [ ] Move the data into an independent structure the UI components consume
    - [ ] Codify the JSON Resume schema
-7. [ ] **MAJOR OVERHAUL:** Migrate repo to a more modern stack
+8. [ ] **MAJOR OVERHAUL:** Migrate repo to a more modern stack
    - [ ] Document a plan
    - [ ] Commit
-8. [ ] Landing page chronicling the themes I've tried
+9. [ ] Landing page chronicling the themes I've tried
    - [ ] Retrofuturistic (the original)
    - [ ] Bare-bones theme that presents the dataset as minimally as possible; homage to jsonresume.org
    - [ ] A new theme, be creative. Perhaps something Vegas? Slot machine layout? Vegas sign svg handled programmatically?
-9. [ ] Projects
+10. [ ] Projects
    - [ ] Get rid of the wedding project
    - [ ] Mention Family Feud: [Destiny-Family-Feud](https://github.com/theredwillow/Destiny-Family-Feud) and my [contributions to Friendly-Feud](https://github.com/joshzcold/Friendly-Feud/commits/master/?author=theredwillow)
    - [ ] Perhaps establish some kind of local scripts folder connection between Claude and my local repos that I work on so it can make suggestions on how to professionally present my work?
-10. [ ] Tastefully add AI keywords
+11. [ ] Tastefully add AI keywords
    - [ ] Read the zeitgeist first (there is an anti-AI movement too)
    - [ ] Add the keywords
