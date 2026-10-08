@@ -24,7 +24,7 @@ Single-page personal portfolio built with Create React App (react-scripts 3.4, R
 
 ## Notes
 
-- [TODO.md](TODO.md) holds the roadmap.
+- [TODO.md](TODO.md) holds the roadmap. When you complete a task, mark it as done while committing.
 - `build/` is a stale duplicate of `public/` plus compiled output; edit `public/` and `src/`, never `build/`.
 
 ## SVG workflow
