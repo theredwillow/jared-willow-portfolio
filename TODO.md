@@ -28,6 +28,7 @@
 9. [ ] Landing page chronicling the themes I've tried
    - [ ] Retrofuturistic (the original)
    - [ ] Bare-bones theme that presents the dataset as minimally as possible; homage to jsonresume.org
+   - [ ] Retrofuturistic 2.0? (lambo.png -> svg, add game)
    - [ ] A new theme, be creative. Perhaps something Vegas? Slot machine layout? Vegas sign svg handled programmatically?
 10. [ ] Projects
    - [ ] Get rid of the wedding project
