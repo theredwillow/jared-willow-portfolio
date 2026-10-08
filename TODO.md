@@ -2,7 +2,6 @@
 
 ## Decisions
 - Data format: [JSON Resume](https://jsonresume.org/) schema. Brag about it a little.
-- Stay on Create React App for now.
 - `name.svg` is redrawn with Claude inside Inkscape; the workflow is in [AGENTS.md](AGENTS.md).
 
 ## Roadmap
@@ -23,9 +22,17 @@
 7. [x] Move the data into an independent structure the UI components consume
    - [x] Codify the JSON Resume schema (types + tests in [src/resume](src/resume))
 8. [ ] **MAJOR OVERHAUL:** Migrate repo to a more modern stack
-   - [ ] Document a plan
-   - [ ] Commit
-   - [ ] Reassess the dependabot situation (including closed MR's from the master -> main branch rename)
+   - Target: Vite + React + TypeScript, in an npm workspaces monorepo (one package for the resume data/types, one folder per theme). Themes consume `resume.json` at build time. Each step below ends with a green build and its own commit.
+   - [ ] Baseline: record the `npm ls --all` package count and `npm audit` results, to compare against at the end
+   - [ ] Decide the unit test runner (keep Jest or move to Vitest) for the [src/resume](src/resume) tests
+   - [ ] Upgrade TypeScript (3.7 -> current)
+   - [ ] Upgrade React (16 -> 18/19)
+   - [ ] Replace Create React App with Vite
+   - [ ] Convert to npm workspaces (resume package + one folder per theme)
+   - [ ] Deploy: one Firebase hosting target per theme (same pattern as `firebase.json` today)
+   - [ ] Reassess the dependabot situation (including closed MR's from the master -> main branch rename) against the baseline
+   - [ ] Update [README.md](README.md) and [AGENTS.md](AGENTS.md)
+   - Later: a non-TypeScript (e.g. Python) theme could live in its own repo and build from a published `resume.json`.
 9. [ ] Landing page chronicling the themes I've tried
    - [ ] Retrofuturistic (the original)
    - [ ] Bare-bones theme that presents the dataset as minimally as possible; homage to jsonresume.org
