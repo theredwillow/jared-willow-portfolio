@@ -25,6 +25,7 @@
 8. [ ] **MAJOR OVERHAUL:** Migrate repo to a more modern stack
    - [ ] Document a plan
    - [ ] Commit
+   - [ ] Reassess the dependabot situation (including closed MR's from the master -> main branch rename)
 9. [ ] Landing page chronicling the themes I've tried
    - [ ] Retrofuturistic (the original)
    - [ ] Bare-bones theme that presents the dataset as minimally as possible; homage to jsonresume.org
