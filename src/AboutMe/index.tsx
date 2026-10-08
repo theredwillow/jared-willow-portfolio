@@ -39,9 +39,6 @@ const AboutMe = () => (
     <div className="card">
       <div className="title">Located</div>
       Las Vegas
-      {/* <br /><br />
-  <div className="title">From</div>
-  Dallas / Fort Worth */}
     </div>
     <div className="card">
       <div className="title">Skills</div>

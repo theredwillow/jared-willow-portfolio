@@ -15,7 +15,7 @@
    - [x] `name` in [package.json](package.json) and [package-lock.json](package-lock.json)
    - [x] GitHub repo rename, then update the git remote (old URL redirects)
    - [x] Local folder name
-2. [ ] Change references of living in DFW to Vegas
+2. [x] Change references of living in DFW to Vegas
 3. [ ] Rename master default branch to main.
 4. [ ] Set up GitHub Actions (or whatever is needed) for easy deployment
 5. [ ] Write docs (probably [README.md](README.md)) about easy set-up
