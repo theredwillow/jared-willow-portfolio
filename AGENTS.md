@@ -17,7 +17,7 @@ Single-page personal portfolio built with Create React App (react-scripts 3.4, R
 
 [src/App.jsx](src/App.jsx) renders the page as a fixed vertical stack of section components: `Header`, `AboutMe`, `Projects`, `Experience`, `Footer`. Each lives in its own folder under `src/` with an `index.tsx` (and optional `style.scss`).
 
-- **Content lives in `data.tsx`**: [src/Projects/data.tsx](src/Projects/data.tsx) and [src/Experience/data.tsx](src/Experience/data.tsx) hold the arrays that `index.tsx` maps over. To add or change a project or job, edit the data file, not the component.
+- **Content lives in [src/resume/resume.json](src/resume/resume.json)**, shaped like the [JSON Resume](https://jsonresume.org/) schema (types in [src/resume/types.ts](src/resume/types.ts)). `AboutMe`, `Projects` and `Experience` read from it. To add or change a project, job or profile, edit the JSON, not the component. Dates are `YYYY-MM`; free text may contain `[text](url)` links, rendered by [src/resume/RichText.tsx](src/resume/RichText.tsx).
 - **Static assets are referenced by absolute URL** (e.g. `/images/name.svg` in [src/Header/index.tsx](src/Header/index.tsx)) and served from [public/](public/), not imported through webpack. Note the Header references `/images/sun.svg`, which is not in `public/images`.
 - **[public/scroll.js](public/scroll.js)** is a plain script outside the React bundle. It adds a `fixed` class to `#name` once the user scrolls past 40% of the viewport height, so the Header's `#name` id and that class are coupled to it.
 - Mixed `.jsx`/`.tsx` is intentional-by-history; follow the extension of the file you're editing.
