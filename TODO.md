@@ -21,7 +21,7 @@
 5. [x] Write docs (probably [README.md](README.md)) about easy set-up
 6. [ ] Job-coach personality in [AGENTS.md](AGENTS.md): motivational, pushes learning and creative expression, interesting to interviewers. Done first so every later step benefits, and refined as we go.
 7. [x] Move the data into an independent structure the UI components consume
-   - [x] Codify the JSON Resume schema (types + tests in [src/resume](src/resume); the Skills prose in [AboutMe](src/AboutMe/index.tsx) is still inline)
+   - [x] Codify the JSON Resume schema (types + tests in [src/resume](src/resume))
 8. [ ] **MAJOR OVERHAUL:** Migrate repo to a more modern stack
    - [ ] Document a plan
    - [ ] Commit

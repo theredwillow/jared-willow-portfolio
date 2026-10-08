@@ -40,4 +40,12 @@ describe("resume data (JSON Resume shape)", () => {
       expect(description).toBeTruthy();
     });
   });
+
+  it("has skills with a name and keywords", () => {
+    expect(typed.skills.length).toBeGreaterThan(0);
+    typed.skills.forEach(({ name, keywords }) => {
+      expect(name).toBeTruthy();
+      expect(keywords.length).toBeGreaterThan(0);
+    });
+  });
 });

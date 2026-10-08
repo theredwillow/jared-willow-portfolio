@@ -71,5 +71,18 @@
       "name": "This Portfolio",
       "description": "Creating a website is not just about what code you know, you need artistic direction too. I hope you're enjoying the retrofuturistic vibes!"
     }
+  ],
+  "skills": [
+    {
+      "name": "Languages and tools",
+      "keywords": [
+        "JavaScript (incl. ES6/TypeScript)",
+        "React",
+        "Angular",
+        "HTML",
+        "(S)CSS",
+        "any programming language (given the time to practice)"
+      ]
+    }
   ]
 }

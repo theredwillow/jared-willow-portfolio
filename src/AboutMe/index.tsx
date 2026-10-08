@@ -32,8 +32,7 @@ const AboutMe = () => (
     </div>
     <div className="card">
       <div className="title">Skills</div>
-      JavaScript (incl. ES6/TypeScript), React, Angular, HTML, (S)CSS, or any
-      programming language, given the time to practice
+      {resume.skills.flatMap(({ keywords }) => keywords).join(", ")}
     </div>
   </div>
 );

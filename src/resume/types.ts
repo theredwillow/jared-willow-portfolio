@@ -27,8 +27,14 @@ export interface Project {
   learnMoreUrl?: string;
 }
 
+export interface Skill {
+  name: string;
+  keywords: string[];
+}
+
 export interface Resume {
   basics: Basics;
   work: Work[];
   projects: Project[];
+  skills: Skill[];
 }
