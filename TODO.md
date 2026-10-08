@@ -6,7 +6,7 @@
 - `name.svg` is redrawn with Claude inside Inkscape; the workflow is in [AGENTS.md](AGENTS.md).
 
 ## Roadmap
-1. [ ] Rename Weide -> Willow everywhere (repo naming included)
+1. [x] Rename Weide -> Willow everywhere (repo naming included)
    - [x] Display text (title, manifest, About Me, header alt)
    - [x] Redraw `name.svg` (Inkscape workflow in [AGENTS.md](AGENTS.md))
    - [x] LinkedIn URL slug (in [AboutMe/index.tsx](src/AboutMe/index.tsx))
@@ -14,7 +14,7 @@
    - [x] Firebase URL: new hosting site `jared-willow-portfolio` in the existing project (project ID stays, it is invisible); old site 301s to it. Takes effect on next deploy
    - [x] `name` in [package.json](package.json) and [package-lock.json](package-lock.json)
    - [x] GitHub repo rename, then update the git remote (old URL redirects)
-   - [ ] Local folder name
+   - [x] Local folder name
 2. [ ] Change references of living in DFW to Vegas
 3. [ ] Rename master default branch to main.
 4. [ ] Set up GitHub Actions (or whatever is needed) for easy deployment
