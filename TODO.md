@@ -17,8 +17,8 @@
    - [x] Local folder name
 2. [x] Change references of living in DFW to Vegas
 3. [x] Rename master default branch to main.
-4. [ ] Set up GitHub Actions (or whatever is needed) for easy deployment
-5. [ ] Write docs (probably [README.md](README.md)) about easy set-up
+4. [x] ~~Set up GitHub Actions for easy deployment~~ Skipped: manual `npm run build` + `firebase deploy` is fine for now (documented in [README.md](README.md)). Revisit before the stack migration.
+5. [x] Write docs (probably [README.md](README.md)) about easy set-up
 6. [ ] Job-coach personality in [AGENTS.md](AGENTS.md): motivational, pushes learning and creative expression, interesting to interviewers. Done first so every later step benefits, and refined as we go.
 7. [ ] Move the data into an independent structure the UI components consume
    - [ ] Codify the JSON Resume schema

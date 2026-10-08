@@ -11,7 +11,7 @@ Single-page personal portfolio built with Create React App (react-scripts 3.4, R
 - `npm start` — dev server
 - `npm run build` — production build into `build/` (gitignored, but it is what Firebase serves)
 - `npm test` — Jest via react-scripts (watch mode; use `CI=true npm test` for a single run, or `npm test -- -t "name"` to filter). [src/App.test.tsx](src/App.test.tsx) is currently fully commented out, so there are effectively no tests yet.
-- Deploy: `npm run build` then `firebase deploy` (config in [firebase.json](firebase.json), project in [.firebaserc](.firebaserc); all routes rewrite to `/index.html`).
+- Deploy: see the Deploy section of [README.md](README.md).
 
 ## Architecture
 
