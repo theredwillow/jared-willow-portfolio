@@ -32,6 +32,8 @@ Single-page personal portfolio built with Create React App (react-scripts 3.4, R
 SVG art is made with Claude driving Inkscape inside `%USERPROFILE%\inkscape-workspace` (a folder in the home directory, not part of this repo). Follow that repo's own `AGENTS.md` and `.claude` rules:
 
 - Edit art there, because the Inkscape MCP can only touch files inside that folder.
-- Work on a project branch there, not `main`.
+- Work on the `jared-willow-portfolio` branch there, not `main`.
+- Before switching branches, note the branch that is checked out (`git branch --show-current`). If it is another project that looks in progress (such as a `HANDOFF.md`, uncommitted art, a recent commit), always check in with the user before moving forward.
+- When clearly done editing SVGs for this project, offer to check the originally opened branch back out.
 - Never commit SVG changes without the user's explicit consent; leave them uncommitted for review in the VS Code preview first.
 - Copy the finished (minified) SVG into this repo's `public/images/` as a normal commit here.
