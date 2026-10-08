@@ -14,7 +14,7 @@ const AboutMe = () => (
       <span className="profession"></span>
       <div id="social-media">
         <a
-          href="https://www.linkedin.com/in/jared-weide-3670164b"
+          href="https://www.linkedin.com/in/jared-willow-3670164b"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -9,7 +9,7 @@
 1. [ ] Rename Weide -> Willow everywhere (repo naming included)
    - [x] Display text (title, manifest, About Me, header alt)
    - [x] Redraw `name.svg` (Inkscape workflow in [AGENTS.md](AGENTS.md))
-   - [ ] LinkedIn URL slug (in [AboutMe/index.tsx](src/AboutMe/index.tsx)); only changes if the slug changes on LinkedIn
+   - [x] LinkedIn URL slug (in [AboutMe/index.tsx](src/AboutMe/index.tsx))
    - NOTE: Leave wedding link in [Projects/data.tsx](src/Projects/data.tsx) as is, the project is being removed later
    - [ ] Firebase project ID in [.firebaserc](.firebaserc); can't be renamed, so new project + redeploy or keep the ID
    - [ ] `name` in [package.json](package.json) and [package-lock.json](package-lock.json)
