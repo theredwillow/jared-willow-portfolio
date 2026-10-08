@@ -1,5 +1,12 @@
 import React from "react";
-import data from "./data";
+import resume from "../resume/resume.json";
+import { Project } from "../resume/types";
+
+const buttonsFor = ({ url, learnMoreUrl }: Project) =>
+  [
+    learnMoreUrl && { text: "Learn More", link: learnMoreUrl },
+    url && { text: "Visit Site", link: url },
+  ].filter(Boolean) as { text: string; link: string }[];
 
 const Projects = () => {
   return (
@@ -10,12 +17,12 @@ const Projects = () => {
         <div className="selected line"></div>
         <div className="line"></div>
       </div>
-      {data.map((project, index) => (
+      {resume.projects.map((project, index) => (
         <div key={`project-${index}`} className="project card">
-          <div className="title">{project.title}</div>
+          <div className="title">{project.name}</div>
           <div className="description">{project.description}</div>
           <div className="buttons">
-            {project.buttons.map((button, index) => {
+            {buttonsFor(project).map((button, index) => {
               return (
                 <a
                   key={index}

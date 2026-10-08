@@ -1,4 +1,7 @@
 import React from "react";
+import resume from "../resume/resume.json";
+
+const { basics } = resume;
 
 const AboutMe = () => (
   <div id="about-me" className="section">
@@ -9,36 +12,23 @@ const AboutMe = () => (
       <div className="line"></div>
     </div>
     <div className="bio card">
-      Jared Willow
+      {basics.name}
       <br />
       <span className="profession"></span>
       <div id="social-media">
-        <a
-          href="https://www.linkedin.com/in/jared-willow-3670164b"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/images/social-media/linkedin.png" alt="LinkedIn" />
-        </a>
-        <a
-          href="https://medium.com/@theredwillows"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/images/social-media/medium.png" alt="Medium" />
-        </a>
-        <a
-          href="https://github.com/theredwillow"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/images/social-media/github.png" alt="GitHub" />
-        </a>
+        {basics.profiles.map(({ network, url }) => (
+          <a key={network} href={url} target="_blank" rel="noopener noreferrer">
+            <img
+              src={`/images/social-media/${network.toLowerCase()}.png`}
+              alt={network}
+            />
+          </a>
+        ))}
       </div>
     </div>
     <div className="card">
       <div className="title">Located</div>
-      Las Vegas
+      {basics.location.city}
     </div>
     <div className="card">
       <div className="title">Skills</div>

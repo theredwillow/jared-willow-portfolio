@@ -1,5 +1,7 @@
 import React from "react";
-import data from "./data";
+import resume from "../resume/resume.json";
+import { formatDateRange } from "../resume/format";
+import RichText from "../resume/RichText";
 // import "./style.scss";
 
 const Experience = () => {
@@ -16,11 +18,13 @@ const Experience = () => {
         <div className="line"></div>
         <div className="selected line"></div>
       </div>
-      {data.map(({ company, time, description }) => (
-        <div className="card">
-          <div className="company">{company}</div>
-          <div className="time">{time}</div>
-          <div className="description">{description}</div>
+      {resume.work.map(({ name, startDate, endDate, summary }) => (
+        <div key={name} className="card">
+          <div className="company">{name}</div>
+          <div className="time">{formatDateRange(startDate, endDate)}</div>
+          <div className="description">
+            <RichText text={summary} />
+          </div>
         </div>
       ))}
       <div className="card more">
