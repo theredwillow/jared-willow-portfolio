@@ -33,7 +33,7 @@
      - [x] Fix the `vector-effect` -> `vectorEffect` React warning in [src/Footer/Mountains.jsx](src/Footer/Mountains.jsx)
      - [x] Update [README.md](README.md) and [AGENTS.md](AGENTS.md) for Vite (dev port 5173, `dist/`, Vitest)
    - [x] Upgrade TypeScript (3.7 -> 7.0.2): no strictness errors; `moduleResolution` is now `bundler`, `vite/client` types replace the deleted `react-app-env.d.ts`, and `npm run typecheck` runs `tsc`
-   - [ ] Upgrade React (16 -> 18/19)
+   - [x] Upgrade React (16 -> 19.3.0): `ReactDOM.render` -> `createRoot` in [src/index.tsx](src/index.tsx)
      - [x] Bootstrap: dropped `bootstrap`, `react-bootstrap` and `@types/react-bootstrap`; nothing in `src` imported them (`.card` is styled in [src/App.scss](src/App.scss))
    - [ ] Convert to npm workspaces (resume package + one folder per theme), last because it is mostly file moves
    - [ ] Deploy: one Firebase hosting target per theme (same pattern as `firebase.json` today)
