@@ -35,10 +35,10 @@
    - [x] Upgrade TypeScript (3.7 -> 7.0.2): no strictness errors; `moduleResolution` is now `bundler`, `vite/client` types replace the deleted `react-app-env.d.ts`, and `npm run typecheck` runs `tsc`
    - [x] Upgrade React (16 -> 19.3.0): `ReactDOM.render` -> `createRoot` in [src/index.tsx](src/index.tsx)
      - [x] Bootstrap: dropped `bootstrap`, `react-bootstrap` and `@types/react-bootstrap`; nothing in `src` imported them (`.card` is styled in [src/App.scss](src/App.scss))
-   - [ ] Convert to npm workspaces (resume package + one folder per theme), last because it is mostly file moves
+   - [x] Convert to npm workspaces: [packages/resume](packages/resume) (`@portfolio/resume`: data, types, formatting, tests) and [themes/retrofuturistic](themes/retrofuturistic) (everything else); root scripts run across workspaces, `firebase.json` now serves `themes/retrofuturistic/dist`. `RichText` stayed in the theme because it is React
    - [ ] Deploy: one Firebase hosting target per theme (same pattern as `firebase.json` today)
    - [ ] Reassess the dependabot situation (including closed MR's from the master -> main branch rename) against the baseline
-   - [ ] Update [README.md](README.md) and [AGENTS.md](AGENTS.md)
+   - [ ] Final pass over [README.md](README.md) and [AGENTS.md](AGENTS.md). Docs for an important change (e.g. the workspaces layout) go in that change's commit, so this is only a check that nothing is stale
    - Later: a non-TypeScript (e.g. Python) theme could live in its own repo and build from a published `resume.json`.
 9. [ ] Landing page chronicling the themes I've tried
    - [ ] Retrofuturistic (the original)

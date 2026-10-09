@@ -1,6 +1,6 @@
 import React from "react";
-import resume from "../resume/resume.json";
-import { Project } from "../resume/types";
+import resume from "@portfolio/resume/resume.json";
+import { Project } from "@portfolio/resume";
 
 const buttonsFor = ({ url, learnMoreUrl }: Project) =>
   [

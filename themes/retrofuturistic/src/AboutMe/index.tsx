@@ -1,5 +1,5 @@
 import React from "react";
-import resume from "../resume/resume.json";
+import resume from "@portfolio/resume/resume.json";
 
 const { basics } = resume;
 

@@ -1,6 +1,6 @@
 # jared-willow-portfolio
 
-My personal portfolio: a single-page Vite site (React 16, TypeScript, Bootstrap, Sass) with a retrofuturistic theme, hosted on Firebase Hosting at <https://jared-willow-portfolio.web.app>.
+My personal portfolio: a Vite site (React 19, TypeScript, Sass) in an npm workspaces monorepo: a shared resume data package plus one folder per theme. The retrofuturistic theme, hosted on Firebase Hosting at <https://jared-willow-portfolio.web.app>.
 
 ## Set up
 
@@ -20,10 +20,17 @@ The dev server runs at <http://localhost:5173>.
 | Command | What it does |
 | --- | --- |
 | `npm start` | Dev server with hot reload |
-| `npm run build` | Production build into `dist/` (gitignored) |
-| `npm run preview` | Serve the production build locally |
-| `npm test` | Single test run with Vitest (`npx vitest` for watch mode) |
-| `npm run typecheck` | Type-check with `tsc` (no emit) |
+| `npm run build` | Production build of every theme into its own `dist/` (gitignored) |
+| `npm run preview -w @portfolio/retrofuturistic` | Serve that theme's production build locally |
+| `npm test` | Single test run with Vitest across the workspaces |
+| `npm run typecheck` | Type-check every workspace with `tsc` (no emit) |
+
+## Layout
+
+| Folder | Package | What it is |
+| --- | --- | --- |
+| [packages/resume](packages/resume) | `@portfolio/resume` | The resume data (JSON Resume shape), its types, formatting helpers and tests |
+| [themes/retrofuturistic](themes/retrofuturistic) | `@portfolio/retrofuturistic` | The original theme, which reads the resume data at build time |
 
 ## Deploy
 
@@ -43,7 +50,7 @@ firebase deploy
 
 This publishes two Firebase Hosting sites in the `jared-weide-portfolio` project (the project ID predates the rename and is invisible to visitors):
 
-- `jared-willow-portfolio`: the site itself, serving `dist/` with every route rewritten to `index.html`.
+- `jared-willow-portfolio`: the site itself, serving `themes/retrofuturistic/dist/` with every route rewritten to `index.html`.
 - `jared-weide-portfolio`: the old URL, serving [legacy-redirect](legacy-redirect) and 301-redirecting everything to the new site.
 
 To publish only the portfolio: `firebase deploy --only hosting:portfolio`.
@@ -52,6 +59,6 @@ Config lives in [firebase.json](firebase.json) and [.firebaserc](.firebaserc).
 
 ## Editing content
 
-Projects and jobs are plain arrays in [src/Projects/data.tsx](src/Projects/data.tsx) and [src/Experience/data.tsx](src/Experience/data.tsx). Edit the data, not the components. Images live in [public/images](public/images).
+Projects, jobs and profiles live in [packages/resume/src/resume.json](packages/resume/src/resume.json). Edit the data, not the components. Theme images live in [themes/retrofuturistic/public/images](themes/retrofuturistic/public/images).
 
 See [AGENTS.md](AGENTS.md) for architecture notes and [TODO.md](TODO.md) for the roadmap.

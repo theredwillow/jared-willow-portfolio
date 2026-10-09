@@ -1,0 +1,14 @@
+{
+  "name": "@portfolio/resume",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./resume.json": "./src/resume.json"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc"
+  }
+}
