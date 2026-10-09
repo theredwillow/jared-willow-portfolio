@@ -10,13 +10,14 @@
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
-    "typescript": "^3.7.3"
+    "typescript": "^7.0.2"
   },
   "scripts": {
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "typecheck": "tsc"
   },
   "browserslist": {
     "production": [

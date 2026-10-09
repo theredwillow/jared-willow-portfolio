@@ -23,6 +23,7 @@ The dev server runs at <http://localhost:5173>.
 | `npm run build` | Production build into `dist/` (gitignored) |
 | `npm run preview` | Serve the production build locally |
 | `npm test` | Single test run with Vitest (`npx vitest` for watch mode) |
+| `npm run typecheck` | Type-check with `tsc` (no emit) |
 
 ## Deploy
 

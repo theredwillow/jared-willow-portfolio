@@ -11,6 +11,7 @@ Single-page personal portfolio built with Vite (React 16, TypeScript 3.7, Bootst
 - `npm start` — dev server
 - `npm run build` — production build into `dist/` (gitignored, but it is what Firebase serves)
 - `npm test` — Vitest, single run (`npx vitest` for watch mode, `npm test -- -t "name"` to filter). Tests live beside the code in [src/resume](src/resume). Config is in [vite.config.mts](vite.config.mts).
+- `npm run typecheck` — `tsc` with no emit; must be clean before committing.
 - Deploy: see the Deploy section of [README.md](README.md).
 
 ## Architecture

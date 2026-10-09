@@ -32,8 +32,7 @@
      - [x] Move Sass global built-ins (`nth`, `random`) in [src/App.scss](src/App.scss) to `sass:list` / `sass:math`
      - [x] Fix the `vector-effect` -> `vectorEffect` React warning in [src/Footer/Mountains.jsx](src/Footer/Mountains.jsx)
      - [x] Update [README.md](README.md) and [AGENTS.md](AGENTS.md) for Vite (dev port 5173, `dist/`, Vitest)
-     - NOTE: `tsc` cannot parse Vitest's types under TypeScript 3.7, so typechecking resumes after the TypeScript upgrade step
-   - [ ] Upgrade TypeScript (3.7 -> current), fixing any strictness errors
+   - [x] Upgrade TypeScript (3.7 -> 7.0.2): no strictness errors; `moduleResolution` is now `bundler`, `vite/client` types replace the deleted `react-app-env.d.ts`, and `npm run typecheck` runs `tsc`
    - [ ] Upgrade React (16 -> 18/19)
      - [ ] Decide on Bootstrap: react-bootstrap 2 + Bootstrap 5, or drop the library (react-bootstrap 1.0 beta does not support new React)
    - [ ] Convert to npm workspaces (resume package + one folder per theme), last because it is mostly file moves
