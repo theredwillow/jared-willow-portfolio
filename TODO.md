@@ -36,7 +36,7 @@
    - [x] Upgrade React (16 -> 19.3.0): `ReactDOM.render` -> `createRoot` in [src/index.tsx](src/index.tsx)
      - [x] Bootstrap: dropped `bootstrap`, `react-bootstrap` and `@types/react-bootstrap`; nothing in `src` imported them (`.card` is styled in [src/App.scss](src/App.scss))
    - [x] Convert to npm workspaces: [packages/resume](packages/resume) (`@portfolio/resume`: data, types, formatting, tests) and [themes/retrofuturistic](themes/retrofuturistic) (everything else); root scripts run across workspaces, `firebase.json` now serves `themes/retrofuturistic/dist`. `RichText` stayed in the theme because it is React
-   - [ ] Deploy: one Firebase hosting target per theme (same pattern as `firebase.json` today)
+   - [x] Deploy: one Firebase hosting target per theme; the `portfolio` target is now `retrofuturistic` ([firebase.json](firebase.json), [.firebaserc](.firebaserc)), and [README.md](README.md) explains how to add a theme's target
    - [ ] Reassess the dependabot situation (including closed MR's from the master -> main branch rename) against the baseline
    - [ ] Final pass over [README.md](README.md) and [AGENTS.md](AGENTS.md). Docs for an important change (e.g. the workspaces layout) go in that change's commit, so this is only a check that nothing is stale
    - Later: a non-TypeScript (e.g. Python) theme could live in its own repo and build from a published `resume.json`.

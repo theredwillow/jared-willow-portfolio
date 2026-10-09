@@ -53,7 +53,9 @@ This publishes two Firebase Hosting sites in the `jared-weide-portfolio` project
 - `jared-willow-portfolio`: the site itself, serving `themes/retrofuturistic/dist/` with every route rewritten to `index.html`.
 - `jared-weide-portfolio`: the old URL, serving [legacy-redirect](legacy-redirect) and 301-redirecting everything to the new site.
 
-To publish only the portfolio: `firebase deploy --only hosting:portfolio`.
+To publish only the retrofuturistic theme: `firebase deploy --only hosting:retrofuturistic`.
+
+Each theme gets its own hosting target, named after its folder in [themes](themes). To add one: create a hosting site in the Firebase console, run `firebase target:apply hosting <theme> <site-id>`, and add a matching entry in [firebase.json](firebase.json) with `public` set to `themes/<theme>/dist`.
 
 Config lives in [firebase.json](firebase.json) and [.firebaserc](.firebaserc).
 
