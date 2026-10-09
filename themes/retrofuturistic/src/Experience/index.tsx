@@ -1,7 +1,7 @@
 import React from "react";
-import resume from "../resume/resume.json";
-import { formatDateRange } from "../resume/format";
-import RichText from "../resume/RichText";
+import resume from "@portfolio/resume/resume.json";
+import { formatDateRange } from "@portfolio/resume";
+import RichText from "../RichText";
 // import "./style.scss";
 
 const Experience = () => {

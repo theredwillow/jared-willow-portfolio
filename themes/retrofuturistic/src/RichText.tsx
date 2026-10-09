@@ -1,5 +1,5 @@
 import React from "react";
-import { splitLinks } from "./format";
+import { splitLinks } from "@portfolio/resume";
 
 const RichText = ({ text }: { text: string }) => (
   <>
