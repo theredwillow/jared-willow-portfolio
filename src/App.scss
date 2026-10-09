@@ -1,3 +1,6 @@
+@use "sass:list";
+@use "sass:math";
+
 body {
   font-family: sans-serif;
   padding-top: 50vh;
@@ -107,20 +110,20 @@ button:before {
 $colors: #ff9472, #e847ae, #13ca91;
 $line-names: about-me, projects, experience;
 $animation-time: 10s;
-$random-times: random(97), random(97), random(97);
+$random-times: math.random(97), math.random(97), math.random(97);
 
 @for $i from 1 through 3 {
-  ##{nth($line-names, $i)} {
-    color: nth($colors, $i);
-    animation: #{nth($line-names, $i)}-flicker
+  ##{list.nth($line-names, $i)} {
+    color: list.nth($colors, $i);
+    animation: #{list.nth($line-names, $i)}-flicker
       $animation-time
       infinite
       step-end;
 
     > .title {
-      text-shadow: 0 0 10px nth($colors, $i), 0 0 15px nth($colors, $i),
-        0 0 20px nth($colors, $i), 0 0 40px nth($colors, $i);
-      animation: #{nth($line-names, $i)}-flicker
+      text-shadow: 0 0 10px list.nth($colors, $i), 0 0 15px list.nth($colors, $i),
+        0 0 20px list.nth($colors, $i), 0 0 40px list.nth($colors, $i);
+      animation: #{list.nth($line-names, $i)}-flicker
         $animation-time
         infinite
         step-end;
@@ -128,49 +131,49 @@ $random-times: random(97), random(97), random(97);
 
     button {
       font-weight: bold;
-      background-color: rgba(nth($colors, $i), 0.1);
-      text-shadow: 0 0 7px rgba(nth($colors, $i), 1),
-        /* bloom */ 0 1px 2px rgba(nth($colors, $i), 0.7); /* drop shadow */
-      box-shadow: inset 0 -2px 10px rgba(nth($colors, $i), 0.4),
-        inset 0 2px 10px rgba(nth($colors, $i), 0.4);
+      background-color: rgba(list.nth($colors, $i), 0.1);
+      text-shadow: 0 0 7px rgba(list.nth($colors, $i), 1),
+        /* bloom */ 0 1px 2px rgba(list.nth($colors, $i), 0.7); /* drop shadow */
+      box-shadow: inset 0 -2px 10px rgba(list.nth($colors, $i), 0.4),
+        inset 0 2px 10px rgba(list.nth($colors, $i), 0.4);
     }
 
     button:before {
       background: linear-gradient(
-        rgba(nth($colors, $i), 0.8),
-        rgba(nth($colors, $i), 0)
+        rgba(list.nth($colors, $i), 0.8),
+        rgba(list.nth($colors, $i), 0)
       );
     }
 
     .selected.line {
-      box-shadow: inset 0.2vw 0 0.5vw 0.1vw nth($colors, $i),
-        inset -0.2vw 0 1vw nth($colors, $i);
-      background-color: rgba(nth($colors, $i), 0.25);
+      box-shadow: inset 0.2vw 0 0.5vw 0.1vw list.nth($colors, $i),
+        inset -0.2vw 0 1vw list.nth($colors, $i);
+      background-color: rgba(list.nth($colors, $i), 0.25);
     }
 
     > .card {
-      text-shadow: 0 0 5px nth($colors, $i), 0 0 10px nth($colors, $i),
-        0 0 20px nth($colors, $i), 0 0 40px nth($colors, $i);
+      text-shadow: 0 0 5px list.nth($colors, $i), 0 0 10px list.nth($colors, $i),
+        0 0 20px list.nth($colors, $i), 0 0 40px list.nth($colors, $i);
       color: rgb(255, 255, 255);
-      box-shadow: inset 0.1vw 0 0.1vw 1px nth($colors, $i),
-        inset -0.2vw 0 0.5vw nth($colors, $i);
+      box-shadow: inset 0.1vw 0 0.1vw 1px list.nth($colors, $i),
+        inset -0.2vw 0 0.5vw list.nth($colors, $i);
     }
   }
 
-  @keyframes #{nth($line-names, $i)}-flicker {
+  @keyframes #{list.nth($line-names, $i)}-flicker {
     0% {
       opacity: 0.9;
     }
-    #{nth($random-times, $i) * 1%} {
+    #{list.nth($random-times, $i) * 1%} {
       opacity: 0.6;
     }
-    #{(nth($random-times, $i) + 1) * 1%} {
+    #{(list.nth($random-times, $i) + 1) * 1%} {
       opacity: 0.9;
     }
-    #{(nth($random-times, $i) + 2) * 1%} {
+    #{(list.nth($random-times, $i) + 2) * 1%} {
       opacity: 0.6;
     }
-    #{(nth($random-times, $i) + 3) * 1%} {
+    #{(list.nth($random-times, $i) + 3) * 1%} {
       opacity: 0.9;
     }
   }
