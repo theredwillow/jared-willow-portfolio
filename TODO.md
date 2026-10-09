@@ -23,12 +23,18 @@
    - [x] Codify the JSON Resume schema (types + tests in [src/resume](src/resume))
 8. [ ] **MAJOR OVERHAUL:** Migrate repo to a more modern stack
    - Target: Vite + React + TypeScript, in an npm workspaces monorepo (one package for the resume data/types, one folder per theme). Themes consume `resume.json` at build time. Each step below ends with a green build and its own commit.
-   - [ ] Baseline: record the `npm ls --all` package count and `npm audit` results, to compare against at the end
-   - [ ] Decide the unit test runner (keep Jest or move to Vitest) for the [src/resume](src/resume) tests
-   - [ ] Upgrade TypeScript (3.7 -> current)
+   - [x] Baseline: record the `npm ls --all` package count and `npm audit` results, to compare against at the end
+     - Recorded 2026-10-08 (Node 22.15.0, npm 10.5.2): 1952 installed packages (`npm ls --all --parseable`), 1956 entries in `package-lock.json` (lockfileVersion 2)
+     - `npm audit`: 217 vulnerabilities (8 low, 134 moderate, 60 high, 15 critical)
+   - [ ] Replace Create React App with Vite, and move the [src/resume](src/resume) tests from Jest to Vitest (drops the `cross-env` / openssl hack)
+     - [ ] Decide the service worker ([src/serviceWorker.ts](src/serviceWorker.ts) relies on CRA): drop it, or use `vite-plugin-pwa`
+     - [ ] Output folder: `build/` -> `dist/`; update [firebase.json](firebase.json) and [.gitignore](.gitignore); delete the stale `build/`
+     - [ ] Move `index.html` to the project root, drop `%PUBLIC_URL%`; check [public/scroll.js](public/scroll.js) and `/images/...` URLs still work
+     - [ ] Check Sass still compiles (bump `sass`, watch for `@import` deprecations)
+   - [ ] Upgrade TypeScript (3.7 -> current), fixing any strictness errors
    - [ ] Upgrade React (16 -> 18/19)
-   - [ ] Replace Create React App with Vite
-   - [ ] Convert to npm workspaces (resume package + one folder per theme)
+     - [ ] Decide on Bootstrap: react-bootstrap 2 + Bootstrap 5, or drop the library (react-bootstrap 1.0 beta does not support new React)
+   - [ ] Convert to npm workspaces (resume package + one folder per theme), last because it is mostly file moves
    - [ ] Deploy: one Firebase hosting target per theme (same pattern as `firebase.json` today)
    - [ ] Reassess the dependabot situation (including closed MR's from the master -> main branch rename) against the baseline
    - [ ] Update [README.md](README.md) and [AGENTS.md](AGENTS.md)
