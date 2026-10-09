@@ -30,7 +30,7 @@
      - [x] Swap CRA for Vite and Vitest: move the [src/resume](src/resume) tests from Jest to Vitest (drops the `cross-env` / openssl hack), move `index.html` to the project root and drop `%PUBLIC_URL%`, output folder `build/` -> `dist/` ([firebase.json](firebase.json), [.gitignore](.gitignore), delete the stale `build/`), check [public/scroll.js](public/scroll.js) and `/images/...` URLs still work
      - [x] Remove the service worker (it was already unregistered; revisit with `vite-plugin-pwa` if offline support is wanted) and the dead CRA files (`setupTests.ts`, `react-app-env.d.ts`); the empty `App.test.tsx` went in the Vite commit because Vitest fails on a test file with no tests
      - [x] Move Sass global built-ins (`nth`, `random`) in [src/App.scss](src/App.scss) to `sass:list` / `sass:math`
-     - [ ] Fix the `vector-effect` -> `vectorEffect` React warning in [src/Footer/Mountains.jsx](src/Footer/Mountains.jsx)
+     - [x] Fix the `vector-effect` -> `vectorEffect` React warning in [src/Footer/Mountains.jsx](src/Footer/Mountains.jsx)
      - [ ] Update [README.md](README.md) and [AGENTS.md](AGENTS.md) for Vite (dev port 5173, `dist/`, Vitest)
      - NOTE: `tsc` cannot parse Vitest's types under TypeScript 3.7, so typechecking resumes after the TypeScript upgrade step
    - [ ] Upgrade TypeScript (3.7 -> current), fixing any strictness errors
