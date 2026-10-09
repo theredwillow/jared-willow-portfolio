@@ -29,14 +29,14 @@ class Mountain {
         key={`${this.id}-front`}
         className="front-face"
         d={`M${this.leftX},100 L${this.peakX},0 L${this.middleX},100 Z`}
-        vector-effect="non-scaling-stroke"
+        vectorEffect="non-scaling-stroke"
         fill="url(#front-gradient)"
       />,
       <path
         key={`${this.id}-right`}
         className="right-face"
         d={`M${this.middleX},100 L${this.peakX},0 L${this.rightX},100 Z`}
-        vector-effect="non-scaling-stroke"
+        vectorEffect="non-scaling-stroke"
         fill="url(#side-gradient)"
       />
     ];
