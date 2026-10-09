@@ -37,7 +37,12 @@
      - [x] Bootstrap: dropped `bootstrap`, `react-bootstrap` and `@types/react-bootstrap`; nothing in `src` imported them (`.card` is styled in [src/App.scss](src/App.scss))
    - [x] Convert to npm workspaces: [packages/resume](packages/resume) (`@portfolio/resume`: data, types, formatting, tests) and [themes/retrofuturistic](themes/retrofuturistic) (everything else); root scripts run across workspaces, `firebase.json` now serves `themes/retrofuturistic/dist`. `RichText` stayed in the theme because it is React
    - [x] Deploy: one Firebase hosting target per theme; the `portfolio` target is now `retrofuturistic` ([firebase.json](firebase.json), [.firebaserc](.firebaserc)), and [README.md](README.md) explains how to add a theme's target
-   - [ ] Reassess the dependabot situation (including closed MR's from the master -> main branch rename) against the baseline
+   - [x] Reassess the dependabot situation (including closed MR's from the master -> main branch rename) against the baseline
+     - Measured 2026-10-08 after the migration: 58 installed packages (`npm ls --all --parseable`, was 1952), 111 `package-lock.json` entries (lockfileVersion 3, was 1956), `npm audit` 0 vulnerabilities (was 217)
+     - The repo has no `.github/dependabot.yml`, and `origin` has only `main`, so no dependabot branches survive from the rename
+     - [x] Added [.github/dependabot.yml](.github/dependabot.yml): npm ecosystem from the root (covers every workspace), monthly, all updates grouped into one PR
+     - [x] Leftover dependabot PRs: all 13 are already closed (9 on 2026-10-08), and `main` is the only remote branch
+     - [ ] Security tab: open alerts all come from the old `package-lock.json` on `main`. After this branch is merged, confirm they auto-close; dismiss any that remain
    - [ ] Final pass over [README.md](README.md) and [AGENTS.md](AGENTS.md). Docs for an important change (e.g. the workspaces layout) go in that change's commit, so this is only a check that nothing is stale
    - Later: a non-TypeScript (e.g. Python) theme could live in its own repo and build from a published `resume.json`.
 9. [ ] Landing page chronicling the themes I've tried
