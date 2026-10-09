@@ -1,6 +1,6 @@
 # jared-willow-portfolio
 
-My personal portfolio: a single-page Create React App site (React 16, TypeScript, Bootstrap, Sass) with a retrofuturistic theme, hosted on Firebase Hosting at <https://jared-willow-portfolio.web.app>.
+My personal portfolio: a single-page Vite site (React 16, TypeScript, Bootstrap, Sass) with a retrofuturistic theme, hosted on Firebase Hosting at <https://jared-willow-portfolio.web.app>.
 
 ## Set up
 
@@ -13,17 +13,16 @@ npm install
 npm start
 ```
 
-The dev server opens at <http://localhost:3000>.
-
-The scripts set `NODE_OPTIONS=--openssl-legacy-provider` (via `cross-env`) because `react-scripts` 3.4 predates OpenSSL 3. Always use `npm run ...` rather than calling `react-scripts` directly.
+The dev server runs at <http://localhost:5173>.
 
 ## Commands
 
 | Command | What it does |
 | --- | --- |
 | `npm start` | Dev server with hot reload |
-| `npm run build` | Production build into `build/` (gitignored) |
-| `CI=true npm test` | Single test run (plain `npm test` is watch mode) |
+| `npm run build` | Production build into `dist/` (gitignored) |
+| `npm run preview` | Serve the production build locally |
+| `npm test` | Single test run with Vitest (`npx vitest` for watch mode) |
 
 ## Deploy
 
@@ -43,7 +42,7 @@ firebase deploy
 
 This publishes two Firebase Hosting sites in the `jared-weide-portfolio` project (the project ID predates the rename and is invisible to visitors):
 
-- `jared-willow-portfolio`: the site itself, serving `build/` with every route rewritten to `index.html`.
+- `jared-willow-portfolio`: the site itself, serving `dist/` with every route rewritten to `index.html`.
 - `jared-weide-portfolio`: the old URL, serving [legacy-redirect](legacy-redirect) and 301-redirecting everything to the new site.
 
 To publish only the portfolio: `firebase deploy --only hosting:portfolio`.
