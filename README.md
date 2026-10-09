@@ -1,6 +1,6 @@
 # jared-willow-portfolio
 
-My personal portfolio: a Vite site (React 19, TypeScript, Sass) in an npm workspaces monorepo: a shared resume data package plus one folder per theme. The retrofuturistic theme, hosted on Firebase Hosting at <https://jared-willow-portfolio.web.app>.
+My personal portfolio: a Vite site (React 19, TypeScript, Sass) in an npm workspaces monorepo: a shared resume data package plus one folder per theme. The retrofuturistic theme is hosted on Firebase Hosting at <https://jared-willow-portfolio.web.app>.
 
 ## Set up
 

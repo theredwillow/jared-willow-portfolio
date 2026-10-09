@@ -43,7 +43,7 @@
      - [x] Added [.github/dependabot.yml](.github/dependabot.yml): npm ecosystem from the root (covers every workspace), monthly, all updates grouped into one PR
      - [x] Leftover dependabot PRs: all 13 are already closed (9 on 2026-10-08), and `main` is the only remote branch
      - [ ] Security tab: open alerts all come from the old `package-lock.json` on `main`. After this branch is merged, confirm they auto-close; dismiss any that remain
-   - [ ] Final pass over [README.md](README.md) and [AGENTS.md](AGENTS.md). Docs for an important change (e.g. the workspaces layout) go in that change's commit, so this is only a check that nothing is stale
+   - [x] Final pass over [README.md](README.md) and [AGENTS.md](AGENTS.md). Docs for an important change (e.g. the workspaces layout) go in that change's commit, so this is only a check that nothing is stale
    - Later: a non-TypeScript (e.g. Python) theme could live in its own repo and build from a published `resume.json`.
 9. [ ] Landing page chronicling the themes I've tried
    - [ ] Retrofuturistic (the original)
